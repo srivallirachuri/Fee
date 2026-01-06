@@ -1,0 +1,236 @@
+/* --- 1. Global Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    padding: 20px;
+}
+
+/* --- 2. Feedback Form & Login Containers --- */
+.feedback-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+/* --- 3. Form Elements --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #666;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 5px rgba(118, 75, 162, 0.2);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* --- 4. Interactive Star Rating --- */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 8px;
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out, transform 0.2s;
+    margin-bottom: 0; /* Reset label margin for stars */
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: #f1c40f;
+}
+
+.star-rating label:active {
+    transform: scale(0.85);
+}
+
+/* --- 5. Buttons --- */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #764ba2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #5a3a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* --- 6. Admin Dashboard Layout --- */
+.admin-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    align-self: flex-start; /* Allows top alignment in the flex body */
+}
+
+.admin-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 200px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card .label { 
+    color: #888; 
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+}
+
+.card .value { 
+    display: block; 
+    font-size: 2.2rem; 
+    color: #764ba2; 
+    font-weight: bold; 
+    margin-top: 5px; 
+}
+
+/* --- 7. Data Table --- */
+.admin-container {
+    background: white;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #764ba2;
+    color: white;
+    padding: 18px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 15px 18px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+/* --- 8. Action Links --- */
+.delete-link {
+    display: inline-block;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    padding: 6px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.delete-link:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+/* --- 9. Success Page --- */
+.success-card {
+    text-align: center;
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.success-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #764ba2;
+    font-weight: bold;
+}
